@@ -1,12 +1,12 @@
 [submodule "server"]
 	path = server
-	url = https://github.com/naver/arcus-memcached.git
+	url = https://github.com/jam2in/arcus-memcached.git
 [submodule "zookeeper"]
 	path = zookeeper
-	url = https://github.com/naver/arcus-zookeeper.git
+	url = https://github.com/jam2in/arcus-zookeeper.git
 [submodule "clients/c"]
 	path = clients/c
-	url = https://github.com/naver/arcus-c-client.git
+	url = https://github.com/jam2in/arcus-c-client.git
 [submodule "clients/java"]
 	path = clients/java
-	url = https://github.com/naver/arcus-java-client.git
+	url = https://github.com/jam2in/arcus-java-client.git

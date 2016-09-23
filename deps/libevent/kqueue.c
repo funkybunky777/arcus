@@ -151,7 +151,16 @@ kq_init(struct event_base *base)
 	if (kevent(kq,
 		kqueueop->changes, 1, kqueueop->events, NEVENT, NULL) != 1 ||
 	    kqueueop->events[0].ident != -1 ||
+#if 1
+            /* 
+             * Issue : Check for Mac OS X 10.4 kqueue bug properly (https://github.com/libevent/libevent/pull/377)
+             * Issue : libevent erroneously detects kqueue bug on macOS 10.12 (https://github.com/libevent/libevent/issues/376)
+             * Commit : https://github.com/libevent/libevent/commit/df6f99e5b51a3c0786f54cb9822604ec63385400
+             */
+            !(kqueueop->events[0].flags & EV_ERROR)) {
+#else
 	    kqueueop->events[0].flags != EV_ERROR) {
+#endif
 		event_warn("%s: detected broken kqueue; not using.", __func__);
 		free(kqueueop->changes);
 		free(kqueueop->events);

@@ -1,12 +1,12 @@
-[submodule "server"]
-	path = server
-	url = https://github.com/jam2in/arcus-memcached.git
-[submodule "zookeeper"]
-	path = zookeeper
-	url = https://github.com/jam2in/arcus-zookeeper.git
 [submodule "clients/c"]
 	path = clients/c
-	url = https://github.com/jam2in/arcus-c-client.git
+	url = https://github.com/jam2in/arcus-c-client
 [submodule "clients/java"]
 	path = clients/java
-	url = https://github.com/jam2in/arcus-java-client.git
+	url = https://github.com/jam2in/arcus-java-client
+[submodule "server"]
+	path = server
+	url = https://github.com/jam2in/arcus-memcached
+[submodule "zookeeper"]
+	path = zookeeper
+	url = https://github.com/jam2in/arcus-zookeeper
